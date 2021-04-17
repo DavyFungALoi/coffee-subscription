@@ -1,3 +1,26 @@
 .intro-container {
-    background-image: url();
+  background-repeat: no-repeat;
+  margin-top: 48px;
+  padding-bottom: 116px;
+  padding-top: 116px;
+  padding-left: 85px;
+  //
+  margin-left: 320px;
+  margin-right: 320px;
+
+  .intro-container__content {
+  }
+  h1 {
+    color: white;
+    max-width: 493px;
+  }
+  .intro-container__micro-copy {
+    max-width: 445px;
+    color: rgba(254, 252, 247, 1);
+    font-weight: 400;
+    opacity: 80%;
+  }
+  .btn {
+    margin-top: 3.5rem;
+  }
 }
