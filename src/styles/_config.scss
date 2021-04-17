@@ -6,8 +6,14 @@ $font-family-body: Barlow Regular;
 $font-size-body: 1rem;
 $font-line-height-body: 1.625rem;
 
+** {
+  box-sizing: border-box;
+}
+
 body {
   font-family: $font-family-body;
+  margin: 0;
+  padding: 0;
 }
 
 %header-text {
@@ -36,4 +42,13 @@ h4 {
   @extend %header-text;
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+  text-decoration: none;
+  color: black;
 }

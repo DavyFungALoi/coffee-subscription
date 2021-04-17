@@ -1,16 +1,18 @@
-import React from 'react'
+import React from "react";
 
 const HomeScreen = () => {
-    return (
+  return (
+    <div>
+      <div className="intro-container">
+        <h1> Great Coffee made simple.</h1>
         <div>
-          
-          <div>Regular Expression</div>
-          <h1>hello</h1>
-          <h2>hello</h2>
-          <h3>hello</h3>
-          <h4>hello</h4>
+          Start your mornings with the world’s best coffees. Try our expertly
+          curated artisan coffees from our best roasters delivered directly to
+          your door, at your schedule.
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
-export default HomeScreen
+export default HomeScreen;
