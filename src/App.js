@@ -10,7 +10,7 @@ import SubscribeScreen from "./Screens/SubscribeScreen";
 function App() {
   return (
     <Router>
-      <div>
+      <div className="main-wrapper">
         <Header className="Header"></Header>
         <Route path="/" component={HomeScreen} exact />
         <Route path="/about" component={AboutUsScreen} exact />
