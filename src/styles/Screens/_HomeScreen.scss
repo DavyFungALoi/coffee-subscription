@@ -89,12 +89,15 @@
   .how-it-works-container__header {
     color: rgba(131, 136, 143, 1);
     font-weight: 900;
+    margin-bottom: 5rem;
   }
 }
 .how-it-works-container__steps-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  .btn {
-    margin-top: 4rem;
-  }
+}
+
+.btn.bottom {
+  margin-top: 4rem;
+  margin-bottom: 12.5rem;
 }

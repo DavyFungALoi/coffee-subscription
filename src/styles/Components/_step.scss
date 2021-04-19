@@ -1,11 +1,33 @@
 .step-container {
+  border-top: 2px solid rgba(253, 214, 186, 1);
   .step-count {
     font-weight: 900;
     font-size: 4.5rem;
+    padding-top: 5.125rem;
     color: rgba(253, 214, 186, 1);
   }
   h4 {
     font-size: 2rem;
     color: rgba(51, 61, 75, 1);
+    max-width: 16rem;
   }
+  .step-container__description {
+    max-width: 16rem;
+  }
+}
+
+.step-container:last-child {
+  border-top: none;
+}
+.step-container::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 2px solid rgba(14, 135, 132, 1);
+  border-radius: 50%;
+  z-index: 1;
 }

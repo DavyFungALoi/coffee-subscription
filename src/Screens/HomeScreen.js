@@ -79,7 +79,7 @@ const HomeScreen = () => {
           ))}
         </div>
       </div>
-      <button className="btn">Create your plan</button>
+      <button className="btn bottom" >Create your plan</button>
     </div>
   );
 };
