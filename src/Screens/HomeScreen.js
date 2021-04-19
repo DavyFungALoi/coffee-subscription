@@ -4,6 +4,8 @@ import Product from "../Components/Product.js";
 import productData from "../assets/productdata";
 import UspCard from "../Components/UspCard.js";
 import uspData from "../assets/uspdata";
+import Step from "../Components/Step";
+import stepData from "../assets/stepsdata.js";
 
 const HomeScreen = () => {
   return (
@@ -59,6 +61,21 @@ const HomeScreen = () => {
               id={usp.id}
               img={usp.img}
             ></UspCard>
+          ))}
+        </div>
+      </div>
+      <div className="how-it-works-container">
+        <h4>How it works</h4>
+
+        <div className="how-it-works-container__steps-container">
+          {stepData.map((step) => (
+            <Step
+              key={step.id}
+              title={step.title}
+              description={step.description}
+              id={step.id}
+              step={step.step}
+            ></Step>
           ))}
         </div>
       </div>
