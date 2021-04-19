@@ -1,0 +1,28 @@
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 46px;
+  margin-bottom: 5.5rem;
+  background-color: #2c343e;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  .footer__list-container {
+    display: flex;
+    column-gap: 1.875rem;
+    align-items: center;
+    margin-left: 10%;
+    li {
+      color: #83888f;
+      font-size: 0.8rem;
+    }
+  }
+  .footer__social-media-container {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 1.875rem;
+  }
+}

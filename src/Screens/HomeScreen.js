@@ -65,7 +65,7 @@ const HomeScreen = () => {
         </div>
       </div>
       <div className="how-it-works-container">
-        <h4>How it works</h4>
+        <h4 className="how-it-works-container__header">How it works</h4>
 
         <div className="how-it-works-container__steps-container">
           {stepData.map((step) => (
@@ -79,6 +79,7 @@ const HomeScreen = () => {
           ))}
         </div>
       </div>
+      <button className="btn">Create your plan</button>
     </div>
   );
 };

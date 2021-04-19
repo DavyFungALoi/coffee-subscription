@@ -15,6 +15,7 @@ function App() {
         <Route path="/" component={HomeScreen} exact />
         <Route path="/about" component={AboutUsScreen} exact />
         <Route path="/subscribe" component={SubscribeScreen} exact />
+        <Footer className="Footer"></Footer>
       </div>
     </Router>
   );

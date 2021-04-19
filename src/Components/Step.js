@@ -3,10 +3,10 @@ import React from "react";
 const Step = (props) => {
   const { title, id, description, step } = props;
   return (
-    <div className="Step-Container" key={id}>
-      <div className="Step-count">{step}</div>
+    <div className="step-container" key={id}>
+      <div className="step-count">{step}</div>
       <h4>{title}</h4>
-      <div className="Step-Container__Description">{description}</div>
+      <div className="step-container__description">{description}</div>
     </div>
   );
 };
