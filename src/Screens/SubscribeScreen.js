@@ -27,7 +27,28 @@ const SubscribeScreen = () => {
         <HowItworks screen="how-it-works-subscribeScreen"></HowItworks>
       </div>
       <div className="subscription-container">
-        <div className="subscription-container__step-tracking-container"></div>
+        <div className="subscription-container__step-tracking-container">
+          <div className="subscription-container__step-track">
+            <h4>01</h4>
+            <h4>Preferences</h4>
+          </div>
+          <div className="subscription-container__step-track">
+            <h4>02</h4>
+            <h4>Bean Type</h4>
+          </div>
+          <div className="subscription-container__step-track">
+            <h4>03</h4>
+            <h4>Quantity</h4>
+          </div>
+          <div className="subscription-container__step-track">
+            <h4>04</h4>
+            <h4>Grind Option</h4>
+          </div>
+          <div className="subscription-container__step-track">
+            <h4>05</h4>
+            <h4>Deliveries</h4>
+          </div>
+        </div>
         <div className="subscription-container__step-container">
           <SubScriptionCards
             key={question1.id}
