@@ -37,6 +37,18 @@ const HomeScreen = () => {
           ))}
         </div>
       </div>
+      <div className="usp-container">
+        <div className="usp-container__usp-message-container">
+          <h2 className="usp-container__header">Why Choose us</h2>
+          <div className="usp-container__micro-copy">
+            A large part of our role is choosing which particular coffees will
+            be featured in our range. This means working closely with the best
+            coffee growers to give you a more impactful experience on every
+            level.
+          </div>
+        </div>
+        <div className="usp-container__card-container"></div>
+      </div>
     </div>
   );
 };

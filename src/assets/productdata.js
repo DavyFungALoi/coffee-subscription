@@ -7,7 +7,7 @@ const productData = [
   {
     title: "Gran Espresso",
     description:
-      "Light and flavorful blend with cocoa and black pepper for an intense experience",
+      "Light and flavorful blend with cocoa and black pepper for an intense experience.",
     img: GranEspressoBag,
     id: 1,
   },
