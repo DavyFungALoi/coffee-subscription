@@ -1,0 +1,19 @@
+.how-it-works-container {
+  .how-it-works-container__header {
+    color: rgba(131, 136, 143, 1);
+    font-weight: 900;
+    margin-bottom: 5rem;
+  }
+}
+.how-it-works-container__steps-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.how-it-works-container.how-it-works-subscribeScreen {
+  background-color: #2c343e;
+}
+
+.how-it-works-container.how-it-works-homeScreen {
+  margin-top: 12.5rem;
+}

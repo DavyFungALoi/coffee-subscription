@@ -6,6 +6,7 @@ import UspCard from "../Components/UspCard.js";
 import uspData from "../assets/uspdata";
 import Step from "../Components/Step";
 import stepData from "../assets/stepsdata.js";
+import HowItworks from "../Components/HowItworks";
 
 const HomeScreen = () => {
   return (
@@ -64,22 +65,9 @@ const HomeScreen = () => {
           ))}
         </div>
       </div>
-      <div className="how-it-works-container">
-        <h4 className="how-it-works-container__header">How it works</h4>
-
-        <div className="how-it-works-container__steps-container">
-          {stepData.map((step) => (
-            <Step
-              key={step.id}
-              title={step.title}
-              description={step.description}
-              id={step.id}
-              step={step.step}
-            ></Step>
-          ))}
-        </div>
-      </div>
-      <button className="btn bottom" >Create your plan</button>
+      <h4 className="how-it-works-container__header">How it works</h4>
+      <HowItworks screen="how-it-works-homeScreen"></HowItworks>
+      <button className="btn bottom">Create your plan</button>
     </div>
   );
 };

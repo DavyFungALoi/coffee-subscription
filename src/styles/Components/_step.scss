@@ -15,7 +15,6 @@
     max-width: 16rem;
   }
 }
-
 .step-container:last-child {
   border-top: none;
 }
@@ -30,4 +29,32 @@
   border: 2px solid rgba(14, 135, 132, 1);
   border-radius: 50%;
   z-index: 1;
+}
+
+.how-it-works-container.how-it-works-subscribeScreen {
+  .step-container {
+    .step-count {
+      font-weight: 900;
+      font-size: 4.5rem;
+      line-height: 4.5rem;
+
+      padding-top: 5.125rem;
+      color: rgba(253, 214, 186, 1);
+    }
+    h4 {
+      font-family: Fraunces 9pt;
+      font-size: 2rem;
+      color: rgba(254, 252, 247, 1);
+      max-width: 16rem;
+    }
+    .step-container__description {
+      max-width: 16rem;
+      color: rgba(254, 252, 247, 1);
+    }
+  }
+  .step-container::before {
+    margin-top: -0.75rem;
+    background-color: transparent;
+    border: 2px solid rgba(14, 135, 132, 1);
+  }
 }

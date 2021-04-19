@@ -83,19 +83,6 @@
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 1.875rem;
 }
-.how-it-works-container {
-  margin-top: 200px;
-
-  .how-it-works-container__header {
-    color: rgba(131, 136, 143, 1);
-    font-weight: 900;
-    margin-bottom: 5rem;
-  }
-}
-.how-it-works-container__steps-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
 
 .btn.bottom {
   margin-top: 4rem;
