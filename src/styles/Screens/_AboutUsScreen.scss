@@ -1,4 +1,4 @@
-.about-container {
+.about-top-container {
   background-repeat: no-repeat;
   margin-top: 48px;
   padding-bottom: 137px;
@@ -14,10 +14,29 @@
     max-width: 493px;
     font-size: 2.5rem;
   }
-  .about-container__micro-copy {
-    max-width: 445px;
+  .about-top-container__micro-copy {
+    max-width: 400px;
     color: rgba(254, 252, 247, 1);
     font-weight: 400;
     opacity: 80%;
   }
+}
+
+.commitement-container {
+  display: flex;
+  margin-top: 19.0625rem;
+  column-gap: 7.8125rem;
+  margin-right: 10.125rem;
+
+  h4 {
+    color: rgba(51, 61, 75, 1);
+    font-size: 2.5rem;
+  }
+  img {
+    border-radius: 0.5rem;
+  }
+}
+.commitement-container__content {
+  max-width: 33.75rem;
+  color: rgba(51, 61, 75, 1);
 }
