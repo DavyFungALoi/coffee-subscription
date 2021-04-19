@@ -1,8 +1,13 @@
 import React from "react";
 import blackcupheroimage from "../assets/plan/desktop/image-hero-blackcup.jpg";
 import HowItworks from "../Components/HowItworks";
+import SubScriptionCards from "../Components/SubscriptionCards";
+import subscribeData from "../assets/subscriptionData";
 
 const SubscribeScreen = () => {
+  console.log(subscribeData[0]);
+
+  const question1 = subscribeData[0];
   return (
     <div>
       <div
@@ -20,6 +25,16 @@ const SubscribeScreen = () => {
       </div>
       <div className="how-it-works-subscribe-container">
         <HowItworks screen="how-it-works-subscribeScreen"></HowItworks>
+      </div>
+      <div className="subscription-container">
+        <div className="subscription-container__step-tracking-container"></div>
+        <div className="subscription-container__step-container">
+          <SubScriptionCards
+            key={question1.id}
+            question={question1.question}
+            choices={question1.choices}
+          ></SubScriptionCards>
+        </div>
       </div>
     </div>
   );
