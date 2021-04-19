@@ -2,9 +2,10 @@ import React from "react";
 import coffeeheroimage from "../assets/home/desktop/image-hero-coffeepress.jpg";
 import Product from "../Components/Product.js";
 import productData from "../assets/productdata";
+import UspCard from "../Components/UspCard.js";
+import uspData from "../assets/uspdata";
 
 const HomeScreen = () => {
-  console.log(productData);
   return (
     <div
       className="intro-container"
@@ -47,7 +48,17 @@ const HomeScreen = () => {
             level.
           </div>
         </div>
-        <div className="usp-container__card-container"></div>
+        <div className="usp-container__card-container">
+          {uspData.map((usp) => (
+            <UspCard
+              key={usp.id}
+              title={usp.title}
+              description={usp.description}
+              id={usp.id}
+              img={usp.img}
+            ></UspCard>
+          ))}
+        </div>
       </div>
     </div>
   );
