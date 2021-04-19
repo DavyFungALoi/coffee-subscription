@@ -6,7 +6,6 @@
   padding-left: 85px;
   border-radius: 10px;
 
-
   .intro-container__content {
   }
   h1 {
@@ -22,4 +21,20 @@
   .btn {
     margin-top: 3.5rem;
   }
+}
+.collection-container {
+  padding-top: 8.5rem;
+  position: relative;
+}
+
+.collection-container__background-header {
+  font-weight: 900;
+  font-size: 9.375rem;
+  opacity: 10%;
+}
+
+.collection-container__product-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 1.875rem;
 }

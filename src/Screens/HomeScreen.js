@@ -23,9 +23,9 @@ const HomeScreen = () => {
       </div>
       <div className="collection-container">
         <h2 className="collection-container__background-header">
-          Our Collection
+          our collection
         </h2>
-        <div className="Projects_Container">
+        <div className="collection-container__product-container">
           {productData.map((product) => (
             <Product
               key={product.id}
