@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const SubscribeScreen = () => {
-    return (
-        <div>
-            subscribe now
-        </div>
-    )
-}
+  return (
+    <div>
+     Subscribe
+    </div>
+  );
+};
 
-export default SubscribeScreen
+export default SubscribeScreen;

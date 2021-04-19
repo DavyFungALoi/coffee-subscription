@@ -1,0 +1,23 @@
+.about-container {
+  background-repeat: no-repeat;
+  margin-top: 48px;
+  padding-bottom: 137px;
+  padding-top: 50px;
+  padding-left: 85px;
+  border-radius: 10px;
+
+  .about-container__content {
+  }
+
+  h1 {
+    color: white;
+    max-width: 493px;
+    font-size: 2.5rem;
+  }
+  .about-container__micro-copy {
+    max-width: 445px;
+    color: rgba(254, 252, 247, 1);
+    font-weight: 400;
+    opacity: 80%;
+  }
+}
