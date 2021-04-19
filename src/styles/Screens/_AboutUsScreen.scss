@@ -24,7 +24,7 @@
 
 .commitement-container {
   display: flex;
-  margin-top: 19.0625rem;
+  margin-top: 10.5rem;
   column-gap: 7.8125rem;
   margin-right: 10.125rem;
 
@@ -39,4 +39,54 @@
 .commitement-container__content {
   max-width: 33.75rem;
   color: rgba(51, 61, 75, 1);
+}
+
+.quality-container__content {
+  margin-top: 10.5rem;
+  padding-left: 7%;
+  padding-top: 6.25rem;
+  padding-bottom: 11rem;
+  background-color: #2c343e;
+  border-radius: 0.625rem;
+  color: rgba(254, 252, 247, 1);
+  h4 {
+    font-weight: 900;
+    font-size: 2.5rem;
+  }
+  .quality-container__copy {
+    max-width: 33.75rem;
+    opacity: 80%;
+  }
+}
+.quality-container {
+  img {
+    position: absolute;
+    z-index: 1;
+    margin-left: 41.8125rem;
+    margin-top: -38.625rem;
+  }
+}
+
+.location-container {
+  margin-top: 10.5rem;
+  margin-left: 7%;
+  margin-right: 12%;
+  margin-bottom: 10.5rem;
+
+  h4 {
+    color: rgba(131, 136, 143, 1);
+    font-weight: 900;
+    margin-bottom: 4.5rem;
+  }
+}
+
+.location-container__location-list {
+  display: flex;
+  column-gap: 8%;
+}
+
+.location-container__location {
+  .location-container__contactinfo {
+    width: 65%;
+  }
 }
