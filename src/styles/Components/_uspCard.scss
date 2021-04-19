@@ -1,0 +1,28 @@
+.usp-card-container {
+  background-color: #0e8784;
+  text-align: center;
+  border-radius: 0.5rem;
+
+  h3 {
+    font-family: 1.5rem;
+    color: rgba(254, 252, 247, 1);
+    font-weight: 900;
+  }
+}
+
+.usp-card-container__image {
+  padding-top: 4rem;
+  padding-top: 3.5rem;
+}
+
+.usp-card-container__description {
+  padding-bottom: 3.5rem;
+  max-width: 15rem;
+  margin: 0 auto;
+  color: rgba(254, 252, 247, 1);
+}
+.card-3 {
+  img {
+    padding-top: 5rem;
+  }
+}

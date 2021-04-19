@@ -7,20 +7,22 @@ import uspData from "../assets/uspdata";
 
 const HomeScreen = () => {
   return (
-    <div
-      className="intro-container"
-      style={{ backgroundImage: `url(${coffeeheroimage})` }}
-    >
-      <div className="intro-container__content">
-        <h1> Great Coffee made simple.</h1>
-        <div className="intro-container__micro-copy">
-          Start your mornings with the world’s best coffees. Try our expertly
-          curated artisan coffees from our best roasters delivered directly to
-          your door, at your schedule.
+    <div>
+      <div
+        className="intro-container"
+        style={{ backgroundImage: `url(${coffeeheroimage})` }}
+      >
+        <div className="intro-container__content">
+          <h1> Great Coffee made simple.</h1>
+          <div className="intro-container__micro-copy">
+            Start your mornings with the world’s best coffees. Try our expertly
+            curated artisan coffees from our best roasters delivered directly to
+            your door, at your schedule.
+          </div>
+          <a href="/subscribe">
+            <button className="btn">Create your plan</button>
+          </a>
         </div>
-        <a href="/subscribe">
-          <button className="btn">Create your plan</button>
-        </a>
       </div>
       <div className="collection-container">
         <h2 className="collection-container__background-header">
@@ -40,7 +42,7 @@ const HomeScreen = () => {
       </div>
       <div className="usp-container">
         <div className="usp-container__usp-message-container">
-          <h2 className="usp-container__header">Why Choose us</h2>
+          <h2 className="usp-container__header">Why choose us?</h2>
           <div className="usp-container__micro-copy">
             A large part of our role is choosing which particular coffees will
             be featured in our range. This means working closely with the best
