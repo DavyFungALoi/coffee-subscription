@@ -11,7 +11,6 @@ const SubscriptionCard = (props) => {
     >
       <h4 className="subscription__option-title">{title}</h4>
       <div className="subscription__option-description">{description}</div>
-      <div>{questionId}</div>
     </div>
   );
 };
