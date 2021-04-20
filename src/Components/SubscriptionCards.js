@@ -13,7 +13,6 @@ const SubscriptionCards = (props) => {
   const {
     question,
     choices,
-    id,
     questionId,
     selectHandler,
     questionAnswer,

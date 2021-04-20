@@ -1,6 +1,6 @@
 import "./App.scss";
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import HomeScreen from "./Screens/HomeScreen";

@@ -4,8 +4,6 @@ import Product from "../Components/Product.js";
 import productData from "../assets/productdata";
 import UspCard from "../Components/UspCard.js";
 import uspData from "../assets/uspdata";
-import Step from "../Components/Step";
-import stepData from "../assets/stepsdata.js";
 import HowItworks from "../Components/HowItworks";
 
 const HomeScreen = () => {

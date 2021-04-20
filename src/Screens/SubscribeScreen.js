@@ -48,6 +48,8 @@ const SubscribeScreen = () => {
         };
         setQuestionAnswer(updateHowOftenCoffee);
         break;
+      default:
+        return;
     }
   };
 
