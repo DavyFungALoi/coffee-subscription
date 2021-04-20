@@ -8,8 +8,20 @@ const SubscriptionCards = (props) => {
     setDisplayState((prevDisplayState) => !prevDisplayState);
   };
   const [displayState, setDisplayState] = useState(false);
+  const [selectedId, setSelectedId] = useState("");
 
-  const { question, choices, id, questionId, selectHandler } = props;
+  const {
+    question,
+    choices,
+    id,
+    questionId,
+    selectHandler,
+    questionAnswer,
+  } = props;
+
+  const selectedIdHandler = (id) => {
+    setSelectedId(id);
+  };
   return (
     <div className="question-container">
       <div className="question-container__header">
@@ -28,12 +40,15 @@ const SubscriptionCards = (props) => {
           <div className="question-container__choices">
             {choices.map((choice) => (
               <SubscriptionCard
+                questionAnswer={questionAnswer}
                 selectHandler={selectHandler}
                 title={choice.choiceTitle}
                 description={choice.choiceDescription}
                 id={choice.id}
                 key={choice.id}
                 questionId={questionId}
+                selectedIdHandler={selectedIdHandler}
+                selectedId={selectedId}
               ></SubscriptionCard>
             ))}
           </div>

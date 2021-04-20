@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const SubscribeScreen = () => {
   const howDrinkCoffeeQuestion = subscribeData[0];
-  const typeCoffeeQuqestion = subscribeData[1];
+  const typeCoffeeQuestion = subscribeData[1];
   const howMuchCoffeeQuestion = subscribeData[2];
   const grindCoffeeQuestion = subscribeData[3];
   const howOftenCoffeeQuestion = subscribeData[4];
@@ -27,7 +27,6 @@ const SubscribeScreen = () => {
           ...questionAnswer,
           howDrinkCoffee: title,
         };
-
         setQuestionAnswer(updatehowDrinkCoffee);
         break;
       case 2:
@@ -99,6 +98,7 @@ const SubscribeScreen = () => {
         <div className="subscription-container__step-container">
           <SubScriptionCards
             selectHandler={selectHandler}
+            questionAnswer={questionAnswer}
             key={howDrinkCoffeeQuestion.id}
             question={howDrinkCoffeeQuestion.question}
             choices={howDrinkCoffeeQuestion.choices}
@@ -106,12 +106,14 @@ const SubscribeScreen = () => {
           ></SubScriptionCards>
           <SubScriptionCards
             selectHandler={selectHandler}
-            key={typeCoffeeQuqestion.id}
-            question={typeCoffeeQuqestion.question}
-            choices={typeCoffeeQuqestion.choices}
-            questionId={typeCoffeeQuqestion.id}
+            questionAnswer={questionAnswer}
+            key={typeCoffeeQuestion.id}
+            question={typeCoffeeQuestion.question}
+            choices={typeCoffeeQuestion.choices}
+            questionId={typeCoffeeQuestion.id}
           ></SubScriptionCards>
           <SubScriptionCards
+            questionAnswer={questionAnswer}
             selectHandler={selectHandler}
             key={howMuchCoffeeQuestion.id}
             question={howMuchCoffeeQuestion.question}
@@ -119,6 +121,7 @@ const SubscribeScreen = () => {
             questionId={howMuchCoffeeQuestion.id}
           ></SubScriptionCards>
           <SubScriptionCards
+            questionAnswer={questionAnswer}
             selectHandler={selectHandler}
             key={grindCoffeeQuestion.id}
             question={grindCoffeeQuestion.question}
@@ -126,6 +129,7 @@ const SubscribeScreen = () => {
             questionId={grindCoffeeQuestion.id}
           ></SubScriptionCards>
           <SubScriptionCards
+            questionAnswer={questionAnswer}
             selectHandler={selectHandler}
             key={howOftenCoffeeQuestion.id}
             question={howOftenCoffeeQuestion.question}
