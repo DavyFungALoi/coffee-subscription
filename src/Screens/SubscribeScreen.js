@@ -6,27 +6,49 @@ import subscribeData from "../assets/subscriptionData";
 import { useState } from "react";
 
 const SubscribeScreen = () => {
-  const question1 = subscribeData[0];
-  const question2 = subscribeData[1];
+  const howDrinkCoffeeQuestion = subscribeData[0];
+  const typeCoffeeQuqestion = subscribeData[1];
+  const howMuchCoffeeQuestion = subscribeData[2];
+  const grindCoffeeQuestion = subscribeData[3];
+  const howOftenCoffeeQuestion = subscribeData[4];
 
-  const [question1Answer, setQuestion1Answer] = useState();
-  const [question2Answer, setQuestion2Answer] = useState();
   const [questionAnswer, setQuestionAnswer] = useState({
-    question1: "",
-    question2: "",
+    howDrinkCoffee: "",
+    typeCoffee: "",
+    howMuchCoffee: "",
+    grindCoffee: "",
+    howOftenCoffee: "",
   });
 
   const selectHandler = (title, questionId) => {
-    //  setQuestion1Answer({ title });
     switch (questionId) {
       case 1:
-        const updatedquestion = { ...questionAnswer, question1: title };
+        const updatehowDrinkCoffee = {
+          ...questionAnswer,
+          howDrinkCoffee: title,
+        };
 
-        setQuestionAnswer(updatedquestion);
+        setQuestionAnswer(updatehowDrinkCoffee);
         break;
       case 2:
-        const updatedquestion2 = { ...questionAnswer, question2: title };
-        setQuestionAnswer(updatedquestion2);
+        const updateTypeCoffee = { ...questionAnswer, typeCoffee: title };
+        setQuestionAnswer(updateTypeCoffee);
+        break;
+      case 3:
+        const updateHowMuchCoffee = { ...questionAnswer, howMuchCoffee: title };
+        setQuestionAnswer(updateHowMuchCoffee);
+        break;
+      case 4:
+        const updateGrindCoffee = { ...questionAnswer, grindCoffee: title };
+        setQuestionAnswer(updateGrindCoffee);
+        break;
+      case 5:
+        const updateHowOftenCoffee = {
+          ...questionAnswer,
+          howOftenCoffee: title,
+        };
+        setQuestionAnswer(updateHowOftenCoffee);
+        break;
     }
   };
 
@@ -77,31 +99,69 @@ const SubscribeScreen = () => {
         <div className="subscription-container__step-container">
           <SubScriptionCards
             selectHandler={selectHandler}
-            key={question1.id}
-            question={question1.question}
-            choices={question1.choices}
-            questionId={question1.id}
+            key={howDrinkCoffeeQuestion.id}
+            question={howDrinkCoffeeQuestion.question}
+            choices={howDrinkCoffeeQuestion.choices}
+            questionId={howDrinkCoffeeQuestion.id}
           ></SubScriptionCards>
           <SubScriptionCards
             selectHandler={selectHandler}
-            key={question2.id}
-            question={question2.question}
-            choices={question2.choices}
-            questionId={question2.id}
+            key={typeCoffeeQuqestion.id}
+            question={typeCoffeeQuqestion.question}
+            choices={typeCoffeeQuqestion.choices}
+            questionId={typeCoffeeQuqestion.id}
+          ></SubScriptionCards>
+          <SubScriptionCards
+            selectHandler={selectHandler}
+            key={howMuchCoffeeQuestion.id}
+            question={howMuchCoffeeQuestion.question}
+            choices={howMuchCoffeeQuestion.choices}
+            questionId={howMuchCoffeeQuestion.id}
+          ></SubScriptionCards>
+          <SubScriptionCards
+            selectHandler={selectHandler}
+            key={grindCoffeeQuestion.id}
+            question={grindCoffeeQuestion.question}
+            choices={grindCoffeeQuestion.choices}
+            questionId={grindCoffeeQuestion.id}
+          ></SubScriptionCards>
+          <SubScriptionCards
+            selectHandler={selectHandler}
+            key={howOftenCoffeeQuestion.id}
+            question={howOftenCoffeeQuestion.question}
+            choices={howOftenCoffeeQuestion.choices}
+            questionId={howOftenCoffeeQuestion.id}
           ></SubScriptionCards>
         </div>
       </div>
-      <button
-        onClick={() => {
-          testHandler();
-        }}
-      >
-        TEST
-      </button>
-      <div>{questionAnswer.question1}</div>
-      <div>{questionAnswer.question2}</div>
+      <div className="order-summary-container">
+        <div className="order-summary__header">Order Summary</div>
+        <div className="order-summary__content">
+          “I drink my coffee as {questionAnswer.howDrinkCoffee}, with a
+          {questionAnswer.typeCoffee} type of bean.
+          {questionAnswer.howMuchCoffee} ground ala {questionAnswer.grindCoffee}
+          , sent to me {questionAnswer.howOftenCoffee}.”
+        </div>
+      </div>
+      <div>
+        <button
+          onClick={() => {
+            testHandler();
+          }}
+        >
+          TEST
+        </button>
+      </div>
     </div>
   );
 };
 
 export default SubscribeScreen;
+
+/*
+  howDrinkCoffee: "",
+    typeCoffee: "",
+    howMuchCoffee: "",
+    grindCoffee: "",
+    howOftenCoffee: "",
+*/
