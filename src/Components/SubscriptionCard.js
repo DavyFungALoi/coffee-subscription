@@ -3,9 +3,9 @@ import React from "react";
 const SubscriptionCard = (props) => {
   const { title, description } = props;
   return (
-    <div>
-      <h4>{title}</h4>
-      <div>{description}</div>
+    <div className="subscription__option-container">
+      <h4 className="subscription__option-title">{title}</h4>
+      <div className="subscription__option-description">{description}</div>
     </div>
   );
 };

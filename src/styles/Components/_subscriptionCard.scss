@@ -16,3 +16,20 @@
   font-weight: 900;
   font-size: 2.5rem;
 }
+
+.subscription__option-container {
+  background-color: #f4f1eb;
+  column-gap: 0.625rem;
+  padding: 2rem 26px 5.25rem 1.5625rem;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+
+  .subscription__option-description {
+    max-width: 10.75rem;
+  }
+}
+
+.subscription__option-container:hover {
+  background-color: rgba(253, 214, 186, 1);
+}
