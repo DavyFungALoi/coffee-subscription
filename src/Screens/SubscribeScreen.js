@@ -3,11 +3,36 @@ import blackcupheroimage from "../assets/plan/desktop/image-hero-blackcup.jpg";
 import HowItworks from "../Components/HowItworks";
 import SubScriptionCards from "../Components/SubscriptionCards";
 import subscribeData from "../assets/subscriptionData";
+import { useState } from "react";
 
 const SubscribeScreen = () => {
-  console.log(subscribeData[0]);
-
   const question1 = subscribeData[0];
+  const question2 = subscribeData[1];
+
+  const [question1Answer, setQuestion1Answer] = useState();
+  const [question2Answer, setQuestion2Answer] = useState();
+  const [questionAnswer, setQuestionAnswer] = useState({
+    question1: "",
+    question2: "",
+  });
+
+  const selectHandler = (title, questionId) => {
+    //  setQuestion1Answer({ title });
+    switch (questionId) {
+      case 1:
+        const updatedquestion = { ...questionAnswer, question1: title };
+
+        setQuestionAnswer(updatedquestion);
+        break;
+      case 2:
+        const updatedquestion2 = { ...questionAnswer, question2: title };
+        setQuestionAnswer(updatedquestion2);
+    }
+  };
+
+  const testHandler = () => {
+    console.log(questionAnswer);
+  };
   return (
     <div>
       <div
@@ -51,12 +76,30 @@ const SubscribeScreen = () => {
         </div>
         <div className="subscription-container__step-container">
           <SubScriptionCards
+            selectHandler={selectHandler}
             key={question1.id}
             question={question1.question}
             choices={question1.choices}
+            questionId={question1.id}
+          ></SubScriptionCards>
+          <SubScriptionCards
+            selectHandler={selectHandler}
+            key={question2.id}
+            question={question2.question}
+            choices={question2.choices}
+            questionId={question2.id}
           ></SubScriptionCards>
         </div>
       </div>
+      <button
+        onClick={() => {
+          testHandler();
+        }}
+      >
+        TEST
+      </button>
+      <div>{questionAnswer.question1}</div>
+      <div>{questionAnswer.question2}</div>
     </div>
   );
 };

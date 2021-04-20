@@ -3,7 +3,7 @@ import SubscriptionCard from "./SubscriptionCard";
 import arrow from "../assets/plan/desktop/icon-arrow.svg";
 
 const SubscriptionCards = (props) => {
-  const { question, choices, id } = props;
+  const { question, choices, id, questionId, selectHandler } = props;
   return (
     <div className="question-container">
       <div className="question-container__header">
@@ -13,9 +13,12 @@ const SubscriptionCards = (props) => {
       <div className="question-container__choices">
         {choices.map((choice) => (
           <SubscriptionCard
+            selectHandler={selectHandler}
             title={choice.choiceTitle}
             description={choice.choiceDescription}
+            id={choice.id}
             key={choice.id}
+            questionId={questionId}
           ></SubscriptionCard>
         ))}
       </div>
