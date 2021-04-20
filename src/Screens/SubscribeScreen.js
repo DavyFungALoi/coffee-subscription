@@ -13,11 +13,11 @@ const SubscribeScreen = () => {
   const howOftenCoffeeQuestion = subscribeData[4];
 
   const [questionAnswer, setQuestionAnswer] = useState({
-    howDrinkCoffee: "",
-    typeCoffee: "",
-    howMuchCoffee: "",
-    grindCoffee: "",
-    howOftenCoffee: "",
+    howDrinkCoffee: "...",
+    typeCoffee: "...",
+    howMuchCoffee: "...",
+    grindCoffee: "...",
+    howOftenCoffee: "...",
   });
 
   const selectHandler = (title, questionId) => {
@@ -132,19 +132,23 @@ const SubscribeScreen = () => {
             choices={howOftenCoffeeQuestion.choices}
             questionId={howOftenCoffeeQuestion.id}
           ></SubScriptionCards>
+          <div className="order-summary-container">
+            <div className="order-summary__header">Order Summary</div>
+            <div className="order-summary__content">
+              “I drink my coffee as
+              <span>{` ${questionAnswer.howDrinkCoffee}`}</span>, with a
+              <span>{` ${questionAnswer.typeCoffee}`} </span>type of bean.
+              <span>{`  ${questionAnswer.howMuchCoffee}`}</span> ground ala
+              <span>{` ${questionAnswer.grindCoffee}`}</span>, sent to me
+              <span>{` ${questionAnswer.howOftenCoffee}`}</span>.”
+            </div>
+          </div>
         </div>
       </div>
-      <div className="order-summary-container">
-        <div className="order-summary__header">Order Summary</div>
-        <div className="order-summary__content">
-          “I drink my coffee as {questionAnswer.howDrinkCoffee}, with a
-          {questionAnswer.typeCoffee} type of bean.
-          {questionAnswer.howMuchCoffee} ground ala {questionAnswer.grindCoffee}
-          , sent to me {questionAnswer.howOftenCoffee}.”
-        </div>
-      </div>
+
       <div>
         <button
+          className="btn"
           onClick={() => {
             testHandler();
           }}
