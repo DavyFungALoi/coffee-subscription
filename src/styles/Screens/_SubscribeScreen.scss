@@ -40,3 +40,9 @@
     }
   }
 }
+@media (max-width: 600px) {
+  .subscription-container__step-tracking-container {
+    display: none;
+  }
+
+}
