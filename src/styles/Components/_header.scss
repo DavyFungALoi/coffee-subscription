@@ -3,7 +3,6 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 46px;
-
   .nav__list-container {
     display: flex;
     li {
@@ -24,6 +23,17 @@
   .nav-container {
     .nav__list-container {
       display: none;
+      li {
+        font-family: Barlow Bold;
+        font-size: 0.8rem;
+        color: rgba(131, 136, 143, 1);
+        line-height: 0.9375rem;
+        font-weight: 700;
+        margin-right: 0rem;
+      }
     }
+  }
+  .nav-container__hamburger {
+    display: none;
   }
 }

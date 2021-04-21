@@ -12,3 +12,9 @@
 .how-it-works-container.how-it-works-homeScreen {
   margin-top: 5rem;
 }
+
+@media (max-width: 600px) {
+  .how-it-works-container__steps-container {
+    display: block;
+  }
+}
