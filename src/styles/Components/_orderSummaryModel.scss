@@ -1,7 +1,7 @@
 .order-modal-container {
   border-radius: 0.5rem;
   max-width: 33.75rem;
-  margin-bottom: 15.625rem
+  margin-bottom: 15.625rem;
 }
 
 .order-modal__header {
@@ -41,4 +41,34 @@
   font-family: $font-family-title;
   font-size: 2rem;
   font-weight: 900;
+}
+
+@media (max-width: 600px) {
+  .order-modal-container {
+    margin-bottom: 3rem;
+    font-family: $font-family-title;
+  }
+  .order-modal__header {
+    color: rgba(255, 255, 255, 1);
+    background-color: #333d4b;
+    padding: 1.75rem 4.25rem 1.75rem 1.5rem;
+  }
+  .order-modal__content {
+    color: #83888f;
+    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+    line-height: 2.5rem;
+  }
+  .order-modal__micro-copy {
+    color: rgba(51, 61, 75, 1);
+    opacity: 80%;
+
+    padding: 0rem 1.5rem 1.5rem 1.5rem;
+  }
+  .order-modal__checkout-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.1875rem;
+    padding: 0rem;
+  }
 }

@@ -74,4 +74,14 @@
   .step-container::before {
     display: none;
   }
+  .how-it-works-container.how-it-works-subscribeScreen {
+    .step-container {
+      .step-container__description {
+        max-width: none;
+      }
+      .step-count {
+        padding-top: 3.5rem
+      }
+    }
+  }
 }
