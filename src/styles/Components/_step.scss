@@ -63,11 +63,15 @@
   .step-container {
     text-align: center;
     border-top: none;
+    h4 {
+      font-size: 2rem;
+      max-width: none;
+    }
+    .step-container__description {
+      max-width: none;
+    }
   }
   .step-container::before {
     display: none;
-  }
-  .step-container__description {
-    max-width: 24rem;
   }
 }
