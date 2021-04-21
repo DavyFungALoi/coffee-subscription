@@ -1,0 +1,45 @@
+.order-modal-container {
+  margin: 0 auto;
+  width: 60%;
+  border-radius: 0.5rem;
+}
+
+.order-modal__header {
+  font-family: $font-family-title;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 1);
+  background-color: #333d4b;
+  padding: 3rem 9.25rem 2.5rem 3.5rem;
+}
+.order-modal__content {
+  font-family: $font-family-title;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #83888f;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  padding-top: 3.5625rem;
+}
+.order-modal__micro-copy {
+  color: rgba(51, 61, 75, 1);
+  opacity: 80%;
+  padding-top: 0.4375rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+.order-modal__checkout-container {
+  display: flex;
+  align-items: center;
+  column-gap: 1.1875rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  padding-top: 2.9375rem;
+  padding-bottom: 3.5rem;
+}
+.order-modal__payment-model {
+  font-family: $font-family-title;
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: left;
+}

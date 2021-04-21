@@ -39,7 +39,7 @@ const OrderSummaryModel = (props) => {
         redeemed at the checkout.
       </div>
       <div className="order-modal__checkout-container">
-        <div>{paymentModel}</div>
+        <div className="order-modal__payment-model">{paymentModel}</div>
         <a href="/home">
           <button className="btn">Checkout</button>
         </a>
