@@ -15,6 +15,11 @@ const SubscribeScreen = () => {
     howOftenCoffee: "...",
   });
 
+  const orderSummaryHandler = () => {
+    setOrderSummaryState((prevDisplayState) => !prevDisplayState);
+  };
+  const [orderSummaryState, setOrderSummaryState] = useState(false);
+
   const selectHandler = (title, questionId) => {
     switch (questionId) {
       case 1:
@@ -48,13 +53,12 @@ const SubscribeScreen = () => {
     }
   };
 
-  const confirmOrderModal = () => {};
-
-  const testHandler = () => {
-    console.log(questionAnswer);
+  const confirmOrderModal = () => {
+    orderSummaryHandler();
   };
+
   return (
-    <div>
+    <div id="overlay">
       <div
         className="about-top-container"
         style={{ backgroundImage: `url(${blackcupheroimage})` }}
@@ -117,20 +121,28 @@ const SubscribeScreen = () => {
               <span>{` ${questionAnswer.howOftenCoffee}`}</span>.”
             </div>
           </div>
+          <div>
+            <button
+              className="btn btn-subscription"
+              onClick={() => {
+                confirmOrderModal();
+              }}
+            >
+              Create my plan!
+            </button>
+          </div>
         </div>
       </div>
 
-      <div>
-        <button
-          className="btn"
-          onClick={() => {
-            testHandler();
-          }}
-        >
-          Create my plan!
-        </button>
-      </div>
-      <OrderSummaryModel questionAnswer={questionAnswer}></OrderSummaryModel>
+      {orderSummaryState ? (
+        <OrderSummaryModel
+          OrderSummaryHandler={confirmOrderModal}
+          orderSummaryState={orderSummaryState}
+          questionAnswer={questionAnswer}
+        ></OrderSummaryModel>
+      ) : (
+        <div></div>
+      )}
     </div>
   );
 };

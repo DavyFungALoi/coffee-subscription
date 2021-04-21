@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const OrderSummaryModel = (props) => {
-  const { questionAnswer } = props;
+  const { questionAnswer, rderSummaryModel } = props;
   const { howOftenCoffee } = questionAnswer;
 
   const [paymentModel, setPaymentModel] = useState();
