@@ -10,10 +10,14 @@ It features React, SCSS & HTML as well as routing to multiple sections of the we
 
 A live version can be found here https://coffee-subscription.herokuapp.com/
 
-Screenshot 1: Landing Page Header
+
 ![landingpagescreenshotexample](/coffeeHeroScreenshot.png)
 
-Screenshot 2: Coffee Selection Process
+**Screenshot 1: Landing Page Header**
+
+
 ![landingpagescreenshotexample](/coffeeProcess.png)
-Screenshot 3: Mobile Coffee Selection Process
+**Screenshot 2: Coffee Selection Process**
+
 ![mobileScreenshot](/mobileCoffee.png)
+**Screenshot 3: Mobile Coffee Selection Process**
