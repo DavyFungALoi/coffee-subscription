@@ -65,7 +65,10 @@ const HomeScreen = () => {
       </div>
       <h4 className="how-it-works-container__header">How it works</h4>
       <HowItworks screen="how-it-works-homeScreen"></HowItworks>
-      <button className="btn bottom">Create your plan</button>
+
+      <a href="/subscribe">
+        <button className="btn bottom">Create your plan</button>
+      </a>
     </div>
   );
 };

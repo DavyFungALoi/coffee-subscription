@@ -6,12 +6,6 @@ import subscribeData from "../assets/subscriptionData";
 import { useState } from "react";
 
 const SubscribeScreen = () => {
-  const howDrinkCoffeeQuestion = subscribeData[0];
-  const typeCoffeeQuestion = subscribeData[1];
-  const howMuchCoffeeQuestion = subscribeData[2];
-  const grindCoffeeQuestion = subscribeData[3];
-  const howOftenCoffeeQuestion = subscribeData[4];
-
   const [questionAnswer, setQuestionAnswer] = useState({
     howDrinkCoffee: "...",
     typeCoffee: "...",
@@ -98,46 +92,17 @@ const SubscribeScreen = () => {
           </div>
         </div>
         <div className="subscription-container__step-container">
-          <SubScriptionCards
-            selectHandler={selectHandler}
-            questionAnswer={questionAnswer}
-            key={howDrinkCoffeeQuestion.id}
-            question={howDrinkCoffeeQuestion.question}
-            choices={howDrinkCoffeeQuestion.choices}
-            questionId={howDrinkCoffeeQuestion.id}
-          ></SubScriptionCards>
-          <SubScriptionCards
-            selectHandler={selectHandler}
-            questionAnswer={questionAnswer}
-            key={typeCoffeeQuestion.id}
-            question={typeCoffeeQuestion.question}
-            choices={typeCoffeeQuestion.choices}
-            questionId={typeCoffeeQuestion.id}
-          ></SubScriptionCards>
-          <SubScriptionCards
-            questionAnswer={questionAnswer}
-            selectHandler={selectHandler}
-            key={howMuchCoffeeQuestion.id}
-            question={howMuchCoffeeQuestion.question}
-            choices={howMuchCoffeeQuestion.choices}
-            questionId={howMuchCoffeeQuestion.id}
-          ></SubScriptionCards>
-          <SubScriptionCards
-            questionAnswer={questionAnswer}
-            selectHandler={selectHandler}
-            key={grindCoffeeQuestion.id}
-            question={grindCoffeeQuestion.question}
-            choices={grindCoffeeQuestion.choices}
-            questionId={grindCoffeeQuestion.id}
-          ></SubScriptionCards>
-          <SubScriptionCards
-            questionAnswer={questionAnswer}
-            selectHandler={selectHandler}
-            key={howOftenCoffeeQuestion.id}
-            question={howOftenCoffeeQuestion.question}
-            choices={howOftenCoffeeQuestion.choices}
-            questionId={howOftenCoffeeQuestion.id}
-          ></SubScriptionCards>
+          {subscribeData.map((subscription) => (
+            <SubScriptionCards
+              questionAnswer={questionAnswer}
+              selectHandler={selectHandler}
+              key={subscription.id}
+              question={subscription.question}
+              choices={subscription.choices}
+              questionId={subscription.id}
+            ></SubScriptionCards>
+          ))}
+
           <div className="order-summary-container">
             <div className="order-summary__header">Order Summary</div>
             <div className="order-summary__content">
@@ -167,11 +132,3 @@ const SubscribeScreen = () => {
 };
 
 export default SubscribeScreen;
-
-/*
-  howDrinkCoffee: "",
-    typeCoffee: "",
-    howMuchCoffee: "",
-    grindCoffee: "",
-    howOftenCoffee: "",
-*/
