@@ -26,9 +26,6 @@ const SubscribeScreen = () => {
     const someEmptyCheck = (filledValue) => filledValue === "...";
     const emptyCheckStatus = answerFilledinState.some(someEmptyCheck);
 
-    if (emptyCheckStatus) {
-      console.log("hello");
-    }
     if (!emptyCheckStatus) {
       setOrderSummaryButtonState(false);
     }

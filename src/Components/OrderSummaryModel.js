@@ -40,7 +40,7 @@ const OrderSummaryModel = (props) => {
       </div>
       <div className="order-modal__checkout-container">
         <div className="order-modal__payment-model">{paymentModel}</div>
-        <a href="">
+        <a href="/">
           <button className="btn">Checkout</button>
         </a>
       </div>

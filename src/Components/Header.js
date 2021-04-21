@@ -1,8 +1,7 @@
-import React, { useState, useLayoutEffect } from "react";
+import React, { useState} from "react";
 import logo from "../assets/shared/desktop/logo.svg";
 import hamBurgerMenu from "../assets/shared/mobile/icon-hamburger.svg";
 import closeMenu from "../assets/shared/mobile/icon-close.svg";
-import MobileMenuHandler from "./ScrollBlockHandler";
 import ScrollBlockHandler from "./ScrollBlockHandler";
 
 const Header = () => {
@@ -25,9 +24,12 @@ const Header = () => {
           openHamburgerHandler();
         }}
       >
-        <img className="menu" src={hamBurgerMenu} alt={"menu"}></img>
+        {menuState ? (
+          <img className="menu" src={closeMenu} alt={"menu"}></img>
+        ) : (
+          <img className="menu" src={hamBurgerMenu} alt={"menu"}></img>
+        )}
       </div>
-
       <ul style={menuState ? displayState : {}} className="nav__list-container">
         <a href="/">
           <li>HOME</li>
