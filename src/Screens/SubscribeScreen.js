@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import blackcupheroimage from "../assets/plan/desktop/image-hero-blackcup.jpg";
 import HowItworks from "../Components/HowItworks";
 import SubScriptionCards from "../Components/SubscriptionCards";
@@ -19,6 +19,20 @@ const SubscribeScreen = () => {
     setOrderSummaryState((prevDisplayState) => !prevDisplayState);
   };
   const [orderSummaryState, setOrderSummaryState] = useState(false);
+  const [orderSummaryButtonState, setOrderSummaryButtonState] = useState(true);
+
+  useEffect(() => {
+    const answerFilledinState = Object.values(questionAnswer);
+    const someEmptyCheck = (filledValue) => filledValue === "...";
+    const emptyCheckStatus = answerFilledinState.some(someEmptyCheck);
+
+    if (emptyCheckStatus) {
+      console.log("hello");
+    }
+    if (!emptyCheckStatus) {
+      setOrderSummaryButtonState(false);
+    }
+  }, [questionAnswer]);
 
   const selectHandler = (title, questionId) => {
     switch (questionId) {
@@ -55,6 +69,11 @@ const SubscribeScreen = () => {
 
   const confirmOrderModal = () => {
     orderSummaryHandler();
+  };
+
+  const buttonDisabled = {
+    backgroundColor: "rgba(226, 222, 219, 1)",
+    cursor: "not-allowed",
   };
 
   return (
@@ -123,6 +142,8 @@ const SubscribeScreen = () => {
           </div>
           <div>
             <button
+              style={orderSummaryButtonState ? buttonDisabled : {}}
+              disabled={orderSummaryButtonState}
               className="btn btn-subscription"
               onClick={() => {
                 confirmOrderModal();
@@ -131,18 +152,17 @@ const SubscribeScreen = () => {
               Create my plan!
             </button>
           </div>
+          {orderSummaryState ? (
+            <OrderSummaryModel
+              OrderSummaryHandler={confirmOrderModal}
+              orderSummaryState={orderSummaryState}
+              questionAnswer={questionAnswer}
+            ></OrderSummaryModel>
+          ) : (
+            <div></div>
+          )}
         </div>
       </div>
-
-      {orderSummaryState ? (
-        <OrderSummaryModel
-          OrderSummaryHandler={confirmOrderModal}
-          orderSummaryState={orderSummaryState}
-          questionAnswer={questionAnswer}
-        ></OrderSummaryModel>
-      ) : (
-        <div></div>
-      )}
     </div>
   );
 };

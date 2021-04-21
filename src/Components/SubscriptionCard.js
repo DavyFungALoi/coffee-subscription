@@ -15,11 +15,10 @@ const SubscriptionCard = (props) => {
     backgroundColor: "#0E8784",
     color: "white",
   };
-  const sameold = {};
 
   return (
     <div
-      style={selectedId === id ? cardSelect : sameold}
+      style={selectedId === id ? cardSelect : {}}
       onClick={() => {
         selectHandler(title, questionId);
         selectedIdHandler(id);
