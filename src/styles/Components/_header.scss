@@ -21,14 +21,32 @@
 
 @media (max-width: 600px) {
   .nav-container {
+    display: grid;
+    column-gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+
     .nav__list-container {
+      top: 50px;
+      margin-top: 50px;
+      z-index: 5;
+      position: absolute;
+      background-color: white;
+      height: 90vh;
+      margin-left: -5px;
       display: none;
+      flex-direction: column;
+      column-gap: 1.75rem;
+      text-align: center;
+      padding-right: 40px;
+      border-style: 1px solid black;
       li {
-        font-family: Barlow Bold;
-        font-size: 0.8rem;
-        color: rgba(131, 136, 143, 1);
-        line-height: 0.9375rem;
-        font-weight: 700;
+        margin-top: 2rem;
+        font-family: $font-family-title;
+        font-size: 1.5rem;
+        color: rgba(51, 61, 75, 1);
+        line-height: 2rem;
+        font-weight: 900;
         margin-right: 0rem;
       }
     }
