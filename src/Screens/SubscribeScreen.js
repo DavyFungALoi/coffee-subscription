@@ -4,6 +4,7 @@ import HowItworks from "../Components/HowItworks";
 import SubScriptionCards from "../Components/SubscriptionCards";
 import subscribeData from "../assets/subscriptionData";
 import { useState } from "react";
+import OrderSummaryModel from "../Components/OrderSummaryModel";
 
 const SubscribeScreen = () => {
   const [questionAnswer, setQuestionAnswer] = useState({
@@ -46,6 +47,8 @@ const SubscribeScreen = () => {
         return;
     }
   };
+
+  const confirmOrderModal = () => {};
 
   const testHandler = () => {
     console.log(questionAnswer);
@@ -124,9 +127,10 @@ const SubscribeScreen = () => {
             testHandler();
           }}
         >
-          TEST
+          Create my plan!
         </button>
       </div>
+      <OrderSummaryModel questionAnswer={questionAnswer}></OrderSummaryModel>
     </div>
   );
 };

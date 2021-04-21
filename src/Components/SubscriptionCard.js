@@ -15,9 +15,7 @@ const SubscriptionCard = (props) => {
     backgroundColor: "#0E8784",
     color: "white",
   };
-  const sameold = {
-    backgroundColor: "#F4F1EB",
-  };
+  const sameold = {};
 
   return (
     <div
