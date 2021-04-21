@@ -19,3 +19,11 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .nav-container {
+    .nav__list-container {
+      display: none;
+    }
+  }
+}

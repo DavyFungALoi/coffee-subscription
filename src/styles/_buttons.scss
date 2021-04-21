@@ -10,6 +10,12 @@
   cursor: pointer;
 }
 
+@media (max-width: 600px) {
+  %btn {
+    padding: 1rem 1.9375rem 1rem 31px;
+  }
+}
+
 .btn {
   @extend %btn;
   background-color: rgba(14, 135, 132, 1);
