@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import logo from "../assets/shared/desktop/logo.svg";
 import hamBurgerMenu from "../assets/shared/mobile/icon-hamburger.svg";
 import closeMenu from "../assets/shared/mobile/icon-close.svg";
+import MobileMenuHandler from "./ScrollBlockHandler";
+import ScrollBlockHandler from "./ScrollBlockHandler";
 
 const Header = () => {
   const [menuState, setMenuState] = useState(false);
@@ -10,9 +12,8 @@ const Header = () => {
   };
 
   const displayState = {
-   display: "flex"
+    display: "flex",
   };
-
   return (
     <div className="nav-container">
       <a href="/">
@@ -38,6 +39,7 @@ const Header = () => {
           <li>CREATE YOUR PLAN</li>
         </a>
       </ul>
+      {menuState ? <ScrollBlockHandler /> : <></>}
     </div>
   );
 };
