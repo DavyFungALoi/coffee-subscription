@@ -1,13 +1,16 @@
-.Product-Container {
+.product-container {
   max-width: 15rem;
   text-align: center;
   h3 {
     color: rgba(51, 61, 75, 1);
   }
 }
-.Product-Image {
+.product-image {
   width: 100%;
 }
 
-.Product-Container__Description {
+@media (max-width: 600px) {
+  .product-container {
+    margin-top: 3rem;
+  }
 }
