@@ -34,6 +34,12 @@
     }
   }
   .nav-container__hamburger {
+    display: block;
+  }
+}
+
+@media (min-width: 600px) {
+  .nav-container__hamburger {
     display: none;
   }
 }

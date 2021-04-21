@@ -84,12 +84,6 @@
   column-gap: 1.875rem;
 }
 
-.how-it-works-container__header {
-  margin-top: 12.5rem;
-  color: rgba(131, 136, 143, 1);
-  font-weight: 900;
-}
-
 .btn.bottom {
   margin-top: 4rem;
   margin-bottom: 12.5rem;
@@ -155,13 +149,7 @@
     z-index: 2;
     display: flex;
     flex-direction: column;
-    row-gap: 1.5rem
-  }
-
-  .how-it-works-container__header {
-    margin-top: 12.5rem;
-    color: rgba(131, 136, 143, 1);
-    font-weight: 900;
+    row-gap: 1.5rem;
   }
 
   .btn.bottom {

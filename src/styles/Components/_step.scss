@@ -61,26 +61,13 @@
 
 @media (max-width: 600px) {
   .step-container {
-    border-top: none;
-    .step-count {
-      font-weight: 900;
-      font-size: 4.5rem;
-      padding-top: 5.125rem;
-      color: rgba(253, 214, 186, 1);
-    }
-    h4 {
-      font-size: 2rem;
-      color: rgba(51, 61, 75, 1);
-      max-width: 16rem;
-    }
-    .step-container__description {
-      max-width: 16rem;
-    }
-  }
-  .step-container:last-child {
+    text-align: center;
     border-top: none;
   }
   .step-container::before {
     display: none;
+  }
+  .step-container__description {
+    max-width: 24rem;
   }
 }

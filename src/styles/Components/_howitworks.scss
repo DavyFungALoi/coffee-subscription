@@ -1,5 +1,9 @@
-.how-it-works-container {
+.how-it-works-container__header {
+  margin-top: 12.5rem;
+  color: rgba(131, 136, 143, 1);
+  font-weight: 900;
 }
+
 .how-it-works-container__steps-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -14,7 +18,16 @@
 }
 
 @media (max-width: 600px) {
+  .how-it-works-container__header {
+    text-align: center;
+    margin-top: 0;
+    color: rgba(131, 136, 143, 1);
+    font-weight: 900;
+  }
   .how-it-works-container__steps-container {
     display: block;
+  }
+  .how-it-works-container__header {
+    margin-top: 7.5rem;
   }
 }
